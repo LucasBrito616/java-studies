@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="512.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RelatorioController">
+
+    <VBox alignment="TOP_CENTER" prefHeight="512.0" prefWidth="812.0" spacing="15" style="-fx-background-color: #f9a825; -fx-padding: 20;">
+        
+        <!-- Título -->
+        <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: white;" text="Relatório de Pratos" />
+
+        <!-- Tabela de Pratos -->
+        <TableView fx:id="tblPratos" prefHeight="450.0" prefWidth="850.0">
+            <columns>
+                <TableColumn fx:id="colNome" prefWidth="256.0" text="Nome do Prato" />
+                <TableColumn fx:id="colCategoria" prefWidth="232.0" text="ingredientes" />
+                <TableColumn fx:id="colIngredientes" minWidth="0.0" prefWidth="141.0" />
+                <TableColumn fx:id="colAcoes" prefWidth="221.0" text="Ações" />
+            </columns>
+        </TableView>
+
+        <!-- Botões -->
+        <HBox alignment="CENTER" spacing="20">
+            <Button fx:id="btnVoltar" style="-fx-background-color: green; -fx-text-fill: white; -fx-font-weight: bold;" text="Adicionar prato" />
+            <Button fx:id="btnFechar" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: red; -fx-text-fill: white;" text="Fechar" />
+        </HBox>
+    </VBox>
+</AnchorPane>
